@@ -8,7 +8,6 @@ public class ListNode
 	
 	// constructor
 
-
 	// pre-condition: initValue is a valid Object and initNext is valid ListNode.
 	// post-condition: value equals initValue and next equals initNext.
 	public ListNode (String initValue,
