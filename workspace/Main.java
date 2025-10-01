@@ -10,6 +10,16 @@ public class Main{
         BufferedReader reader = new BufferedReader(
             new InputStreamReader(System.in));
 
+          //hard code test for reverse
+      LinkedList list1 = new LinkedList();
+      list1.addAValue("Alpha");
+      list1.addAValue("Beta");
+      list1.addAValue("Charlie");
+      list1.addAValue("Delta");
+      System.out.println(list1.showValues());
+      list1.reverse();
+      System.out.println(list1.showValues());
+
         // Reading data using readLine
         LinkedList list = new LinkedList();
         String input= reader.readLine();

@@ -1,7 +1,7 @@
 /*
 @author Roi Porat-Shliom with starter code from Mr. Menchukov
-@version 9/24/2025
-@purpose 
+@version 9/30/2025
+@purpose create the linkedlist class containing methods to add, show, clear, remove, and reverse a linked list/its values
 */ 
 
 /*
@@ -104,4 +104,28 @@ public class LinkedList{
     length = 1;
     head = null;
   }
-}
+
+
+  //precondition: the linked list has been initialized
+  //postconditions: the linked list is reversed
+  public void reverse(){
+    ListNode prev = null;
+    ListNode current = head;
+
+    while (current != null){
+      ListNode next=current.getNext();
+      current.setNext(prev);
+      prev = current;
+      current = next;
+
+    }
+    head = prev;
+  }
+
+  //precondition: the linked list has been initialized
+  //postconditions: groups of n nodes in the linked list are reversed
+  public void nReverse(){
+
+  }
+  }
+
