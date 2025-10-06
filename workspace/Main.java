@@ -11,7 +11,7 @@ public class Main{
             new InputStreamReader(System.in));
 
           //hard code test for reverse
-      LinkedList list1 = new LinkedList();
+      /*LinkedList list1 = new LinkedList();
       list1.addAValue("Alpha");
       list1.addAValue("Beta");
       list1.addAValue("Charlie");
@@ -19,6 +19,22 @@ public class Main{
       System.out.println(list1.showValues());
       list1.reverse();
       System.out.println(list1.showValues());
+      */
+      LinkedList list2 = new LinkedList();
+      list2.addAValue("alpha");
+      list2.addAValue("beta");
+      list2.addAValue("mu");
+      list2.addAValue("chi");
+      list2.addAValue("gamma");
+      list2.addAValue("sigma");
+      list2.addAValue("theta");
+      list2.addAValue("delta");
+      list2.addAValue("epsilon");
+      list2.addAValue("mench");
+      System.out.println(list2.showValues());
+      list2.nReverse(3);
+      System.out.println(list2.showValues());
+
 
         // Reading data using readLine
         LinkedList list = new LinkedList();

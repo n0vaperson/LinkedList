@@ -124,8 +124,42 @@ public class LinkedList{
 
   //precondition: the linked list has been initialized
   //postconditions: groups of n nodes in the linked list are reversed
-  public void nReverse(){
+  public void nReverse(int n){
+    ListNode prev = null;
+    ListNode current = head;
+    ListNode next = null;
+    ListNode temp = new ListNode(null, head);
+    ListNode newH = head;
+    ListNode newE = temp;
 
+    while (newH != null){
+      current = newH;
+      int groupCount;
+
+      for (groupCount = 0; groupCount <n && current != null; groupCount++){
+        current = current.getNext();
+      }
+
+      if(groupCount<n){
+        break;
+      }
+
+      prev = null;
+      current = newH;
+
+      for (int i = 0; i<n; i++){
+        next = current.getNext();
+        current.setNext(prev);
+        prev = current;
+        current = next;
+    }
+
+    newE.setNext(prev);
+    newH.setNext(current);
+    newE = newH;
+    newH = current;
+    }
+    head = temp.getNext();
   }
   }
 
